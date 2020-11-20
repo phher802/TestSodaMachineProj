@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SodaMachineProject", "SodaTesting\SodaMachineProject.csproj", "{44E445C3-C42F-4BF8-AA61-65A0F587F50C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SodaMachineTestProject", "SodaMachineTestProject\SodaMachineTestProject.csproj", "{2EA636FF-8566-44AD-ABFE-DD2F7236FECB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44E445C3-C42F-4BF8-AA61-65A0F587F50C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44E445C3-C42F-4BF8-AA61-65A0F587F50C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44E445C3-C42F-4BF8-AA61-65A0F587F50C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44E445C3-C42F-4BF8-AA61-65A0F587F50C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EA636FF-8566-44AD-ABFE-DD2F7236FECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EA636FF-8566-44AD-ABFE-DD2F7236FECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EA636FF-8566-44AD-ABFE-DD2F7236FECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EA636FF-8566-44AD-ABFE-DD2F7236FECB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53ED8B48-9DA7-433D-B5AE-D4EA4AC20F5B}
+	EndGlobalSection
+EndGlobal
