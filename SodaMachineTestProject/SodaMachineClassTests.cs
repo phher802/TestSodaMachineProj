@@ -112,5 +112,21 @@ namespace SodaMachineTestProject
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void DetermineAmountOfChange_CaculateChangeToReturn_AmountOfChangeIs15Cents()
+        {
+            //Arrange - objects, variables, etc.
+            SodaMachine soda = new SodaMachine();
+            Can orangeSoda = new OrangeSoda();
+            double payment = 0.25;
+
+            double expected = 0.19;
+            double actual;
+
+            //Act
+            actual = soda.DetermineAmountOfChange(orangeSoda, payment);
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
