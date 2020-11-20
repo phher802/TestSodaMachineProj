@@ -94,5 +94,23 @@ namespace SodaMachineTestProject
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void ContainsCan_DoesInventoryHaveSelectedCan_InventoryDoesHaveCan()
+        {
+            //Arrange - objects/variables/etc
+            SodaMachine soda = new SodaMachine();
+            Can cola = new Cola();
+
+            bool expected = true;
+            bool actual;
+
+            //Act
+
+            actual = soda.ContainsCan(cola);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
