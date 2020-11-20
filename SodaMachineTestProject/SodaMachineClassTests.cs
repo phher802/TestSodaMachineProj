@@ -63,7 +63,7 @@ namespace SodaMachineTestProject
             //need to instantiate soda machine, need list of coins, and a register list
             SodaMachine soda = new SodaMachine();
             //List<Coin> register = new List<Coin>() { new Quarter(), new Dime() };
-            bool hasCoin = true;
+          
 
             bool expected = true;
             bool actual;
@@ -74,6 +74,24 @@ namespace SodaMachineTestProject
             actual = soda.ContainsCoin("quarter");
             
             //Assert - expected output
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void AddCoinsToRegister_AreCoinsAddedToRegister_RegisterWillHave21Quarters()
+        {
+            //Arrange
+            SodaMachine soda = new SodaMachine();
+            Coin quarter = new Coin();
+
+            int expected = 101;
+            int actual;
+
+            //Act
+            soda.AddCoinsToRegister(1, quarter);
+            actual = soda.register.Count;
+
+            //Assert
             Assert.AreEqual(expected, actual);
         }
     }
