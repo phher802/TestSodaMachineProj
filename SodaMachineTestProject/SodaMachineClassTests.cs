@@ -56,6 +56,25 @@ namespace SodaMachineTestProject
             Assert.AreEqual(expected, actual);
         }
 
-        
+        [TestMethod]
+        public void ContainsCoin_DoesRegisterContainCoin_RegisterContainsAQuarterAndDime()
+        {
+            //Arrange - objects,variables, etc.
+            //need to instantiate soda machine, need list of coins, and a register list
+            SodaMachine soda = new SodaMachine();
+            //List<Coin> register = new List<Coin>() { new Quarter(), new Dime() };
+            bool hasCoin = true;
+
+            bool expected = true;
+            bool actual;
+
+
+            //Act - call methods to test
+            //call ContainsCoins to check if coins are in register
+            actual = soda.ContainsCoin("quarter");
+            
+            //Assert - expected output
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
