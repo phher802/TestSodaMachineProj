@@ -128,5 +128,29 @@ namespace SodaMachineTestProject
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void RemoveAndAdd_RemoveSelectedCanFromInventoryToAddToBackpack_InventoryIs35CansBackpackIs1()
+        {
+            // Arrange
+            
+            SodaMachine soda = new SodaMachine();
+            Customer customer = new Customer();
+            Can cola = new Cola();
+
+            double inventoryExpected = 35;
+            double backpackExpected = 1;
+            double inventoryActual;
+            double backpackActual;
+
+            // Act
+            soda.DispenseSodaToCustomer(customer,cola);
+            inventoryActual = soda.inventory.Count;
+            backpackActual = customer.backpack.cans.Count;
+            //Assert
+
+            Assert.AreEqual(inventoryExpected, inventoryActual);
+            Assert.AreEqual(backpackExpected, backpackActual);
+        }
     }
 }
