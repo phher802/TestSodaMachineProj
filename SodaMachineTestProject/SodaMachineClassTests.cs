@@ -51,7 +51,7 @@ namespace SodaMachineTestProject
             soda.Execute(cust, "Orange Soda", twoQuarters);
             //We're testing number of coins in the register, so 'actual' = count of coin list.
             actual = soda.register.Count;
-           
+
             //Assert
             Assert.AreEqual(expected, actual);
         }
@@ -63,7 +63,7 @@ namespace SodaMachineTestProject
             //need to instantiate soda machine, need list of coins, and a register list
             SodaMachine soda = new SodaMachine();
             //List<Coin> register = new List<Coin>() { new Quarter(), new Dime() };
-          
+
 
             bool expected = true;
             bool actual;
@@ -72,7 +72,7 @@ namespace SodaMachineTestProject
             //Act - call methods to test
             //call ContainsCoins to check if coins are in register
             actual = soda.ContainsCoin("quarter");
-            
+
             //Assert - expected output
             Assert.AreEqual(expected, actual);
         }
@@ -133,7 +133,7 @@ namespace SodaMachineTestProject
         public void RemoveAndAdd_RemoveSelectedCanFromInventoryToAddToBackpack_InventoryIs35CansBackpackIs1()
         {
             // Arrange
-            
+
             SodaMachine soda = new SodaMachine();
             Customer customer = new Customer();
             Can cola = new Cola();
@@ -144,13 +144,34 @@ namespace SodaMachineTestProject
             double backpackActual;
 
             // Act
-            soda.DispenseSodaToCustomer(customer,cola);
+            soda.DispenseSodaToCustomer(customer, cola);
             inventoryActual = soda.inventory.Count;
             backpackActual = customer.backpack.cans.Count;
             //Assert
 
             Assert.AreEqual(inventoryExpected, inventoryActual);
             Assert.AreEqual(backpackExpected, backpackActual);
+
+        }
+
+        [TestMethod]
+        public void PrepareCan_CheckToSeeIfSelectedCanIsAvailable_ReturnColaIfAvailable()
+        {
+            // Arrange
+            SodaMachine soda = new SodaMachine();
+            Can cola = new Cola();
+            Can orangeSoda = new OrangeSoda();
+            Can newCan;
+
+            string expected = cola.name;
+            string actual;
+
+            // Act
+            newCan = soda.PrepareCan("Cola");
+            actual = newCan.name;
+
+            // Assert
+            Assert.AreEqual(expected, actual);
         }
     }
 }
